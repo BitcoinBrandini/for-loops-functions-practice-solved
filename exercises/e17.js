@@ -6,8 +6,9 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
 
+  
+  return array.includes(value);
 }
 
 

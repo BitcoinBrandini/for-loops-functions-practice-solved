@@ -5,7 +5,23 @@
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllDepositsGreaterThanOneHundred(array) {
-  // Your code goes here...
+
+  const depositsGreaterThan100 = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const deposits = array[i].deposits;
+
+    if (deposits && deposits.length > 0) {
+      for (let j = 0; j < deposits.length; j++) {
+        if (deposits[j] > 100) {
+          depositsGreaterThan100.push(deposits[j]);
+        }
+      }
+    }
+  }
+
+  return depositsGreaterThan100;
+
 
 }
 

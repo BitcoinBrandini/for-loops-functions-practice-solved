@@ -4,8 +4,12 @@
 // getAverage([22, 45, 4, 65]) => 34
 
 export function getAverage(array) {
-  // Your code goes here...
-
+  let counter  = 0;
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+    counter = element + counter;
+    }
+    return counter / array.length;
 }
 
 

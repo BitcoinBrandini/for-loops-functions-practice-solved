@@ -4,9 +4,22 @@
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
 export function getClientWithLeastBalance(array) {
-  // Your code goes here...
-
+  let lowestBalanceAccount = null;
+  for (let i = 0; i < array.length; i++) {
+    const account = array[i];
+    if (account.balance > 0) {
+      if (lowestBalanceAccount == null || account.balance < lowestBalanceAccount.balance) {
+        lowestBalanceAccount = account;
+      }
+    }
+  }
+  if (lowestBalanceAccount != null) {
+    return [lowestBalanceAccount];
+  } else {
+    return "No accounts with a balance higher than 0 were found.";
+  }
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
